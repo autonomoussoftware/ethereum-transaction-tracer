@@ -1,5 +1,6 @@
 {
   "jsonRpcApiUrl": "http://parity.bloqrock.net:8545",
   "websocketApiUrl": "ws://parity.bloqrock.net:8546",
-  "apiPort": 8080
+  "apiPort": 8080,
+  "corsOrigins": ["http://explorer.mtn.bloqrock.net"]
 }
