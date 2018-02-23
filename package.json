@@ -1,13 +1,14 @@
 {
   "name": "ethereum-transaction-tracer",
   "version": "1.0.0",
-  "description": "REST API to get Ethereum transaction traces from Parity node",
-  "main": "index.js",
+  "description": "🐾 Simple REST tracer for Ethereum transactions",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/api",
+    "dev": "nodemon ./bin/api"
   },
   "dependencies": {
+    "config": "^1.29.4",
     "restify": "^6.3.4",
     "restify-router": "^0.5.0",
     "web3": "1.0.0-beta.30"
