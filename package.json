@@ -4,7 +4,22 @@
   "description": "REST API to get Ethereum transaction traces from Parity node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "restify": "^6.3.4",
+    "restify-router": "^0.5.0",
+    "web3": "1.0.0-beta.30"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.14.12"
   },
   "repository": {
     "type": "git",
@@ -22,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/bloqpriv/ethereum-transaction-tracer/issues"
   },
-  "homepage": "https://github.com/bloqpriv/ethereum-transaction-tracer#readme"
+  "homepage": "https://github.com/bloqpriv/ethereum-transaction-tracer#readme",
+  "engines": {
+    "node": "8",
+    "npm": "5"
+  }
 }
