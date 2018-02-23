@@ -1,0 +1,26 @@
+{
+  "name": "ethereum-transaction-tracer",
+  "version": "1.0.0",
+  "description": "REST API to get Ethereum transaction traces from Parity node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloqpriv/ethereum-transaction-tracer.git"
+  },
+  "keywords": [
+    "ethereum",
+    "transaction",
+    "tracer",
+    "parity",
+    "rest"
+  ],
+  "author": "Ignacio Anaya <ignacio@bloq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloqpriv/ethereum-transaction-tracer/issues"
+  },
+  "homepage": "https://github.com/bloqpriv/ethereum-transaction-tracer#readme"
+}
