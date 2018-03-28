@@ -4,6 +4,8 @@ const debug = require('debug')('ett.api')
 const { corsOrigins } = require('config')
 const corsMiddleware = require('restify-cors-middleware')
 
+const logger = require('./logger.js')
+
 const routes = require('./routes')
 const server = restify.createServer()
 
@@ -24,7 +26,7 @@ function start () {
   routes.applyRoutes(server)
 
   server.listen(apiPort, function () {
-    console.log(`API started on port ${apiPort}`)
+    logger.info(`API started on port ${apiPort}`)
   })
 }
 

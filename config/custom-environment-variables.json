@@ -1,5 +1,17 @@
 {
   "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "websocketApiUrl": "ENODE_WS_API_URL",
-  "apiPort": "PORT"
+  "apiPort": "PORT",
+  "logger": {
+    "papertrail": {
+      "colorize": "true",
+      "flushOnClose": "true",
+      "handleExceptions": "true",
+      "host": "",
+      "inlineMeta": "true",
+      "level": "info",
+      "port": "",
+      "program": "metronome-api"
+    }
+  }
 }
