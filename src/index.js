@@ -1,4 +1,5 @@
 const { apiPort } = require('config')
+require('newrelic')
 const restify = require('restify')
 const debug = require('debug')('ett.api')
 const { corsOrigins } = require('config')
