@@ -1,17 +1,10 @@
 {
+  "newrelic": {
+    "apikey": "NEW_RELIC_API_KEY",
+    "level": "NEW_RELIC_LOG_LEVEL"
+  },
   "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "websocketApiUrl": "ENODE_WS_API_URL",
   "apiPort": "PORT",
-  "logger": {
-    "papertrail": {
-      "colorize": "true",
-      "flushOnClose": "true",
-      "handleExceptions": "true",
-      "host": "",
-      "inlineMeta": "true",
-      "level": "info",
-      "port": "",
-      "program": "metronome-api"
-    }
-  }
+  "corsOrigins": ["CORS_ORIGIN_URL"]
 }

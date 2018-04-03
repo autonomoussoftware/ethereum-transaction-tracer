@@ -1,5 +1,9 @@
-const { apiPort } = require('config')
-require('newrelic')
+const config = require('config')
+
+if (config.newrelic.apikey) {
+  require('newrelic')
+}
+
 const restify = require('restify')
 const debug = require('debug')('ett.api')
 const { corsOrigins } = require('config')
@@ -26,8 +30,8 @@ server.use(logRequest)
 function start () {
   routes.applyRoutes(server)
 
-  server.listen(apiPort, function () {
-    logger.info(`API started on port ${apiPort}`)
+  server.listen(config.apiPort, function () {
+    console.log(`API started on port ${config.apiPort}`)
   })
 }
 
