@@ -1,5 +1,13 @@
 {
+  "newrelic": {
+    "licenseKey": "NEW_RELIC_LICENSE_KEY",
+    "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
+  },
   "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "websocketApiUrl": "ENODE_WS_API_URL",
-  "apiPort": "PORT"
+  "apiPort": "PORT",
+  "corsOrigins": {
+    "__name": "CORS_ORIGINS",
+    "__format": "json"
+  }
 }

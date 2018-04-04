@@ -8,11 +8,16 @@
     "dev": "nodemon ./bin/api"
   },
   "dependencies": {
-    "config": "^1.29.4",
+    "config": "^1.30.0",
+    "newrelic": "^3.3.0",
     "restify": "^6.3.4",
     "restify-cors-middleware": "^1.1.0",
     "restify-router": "^0.5.0",
-    "web3": "1.0.0-beta.30"
+    "web3": "1.0.0-beta.30",
+    "winston": "^2.4.1",
+    "winston-child-logger": "0.0.1",
+    "winston-papertrail": "^1.0.5",
+    "winston-sentry-transport": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
