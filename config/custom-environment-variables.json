@@ -6,5 +6,8 @@
   "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "websocketApiUrl": "ENODE_WS_API_URL",
   "apiPort": "PORT",
-  "corsOrigins": "CORS_ORIGIN_URL"
+  "corsOrigins": {
+    "__name": "CORS_ORIGINS",
+    "__format": "json"
+  }
 }
