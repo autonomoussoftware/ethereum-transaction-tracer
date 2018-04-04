@@ -9,5 +9,16 @@
   "corsOrigins": {
     "__name": "CORS_ORIGINS",
     "__format": "json"
+  },
+  "logger": {
+    "papertrail": {
+      "colorize": "true",
+      "flushOnClose": "true",
+      "handleExceptions": "true",
+      "inlineMeta": "true",
+      "host": "PAPERTRAIL_LOGGING_HOST",
+      "port": "PAPERTRAIL_LOGGING_PORT",
+      "program": "PAPERTRAIL_LOGGING_PROGRAM"
+    }
   }
 }
