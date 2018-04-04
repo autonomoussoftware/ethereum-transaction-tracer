@@ -7,4 +7,4 @@
 - `ENODE_JSON_RPC_API_URL`: JSON-RPC from an eth node.
 - `ENODE_WS_API_URL`: Websocket from an eth node.
 - `PORT`: Listening port.
-- `NEW_RELIC_API_KEY`: New Relic api key.
+- `NEW_RELIC_LICENSE_KEY`: New Relic api key.
