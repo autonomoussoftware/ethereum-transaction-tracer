@@ -1,8 +1,5 @@
 {
-  "newrelic": {
-    "apikey": "",
-    "level": ""
-  },
+  "newrelic": {},
   "jsonRpcApiUrl": "http://parity.bloqrock.net:8545",
   "websocketApiUrl": "ws://parity.bloqrock.net:8546",
   "apiPort": 8080,
@@ -12,11 +9,9 @@
       "colorize": "true",
       "flushOnClose": "true",
       "handleExceptions": "true",
-      "host": "",
       "inlineMeta": "true",
       "level": "info",
-      "port": "",
-      "program": "metronome-api"
+      "program": "ethereum-tracer"
     }
   }
 }
