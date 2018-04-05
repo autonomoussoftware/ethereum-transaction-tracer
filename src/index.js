@@ -5,7 +5,6 @@ if (config.newrelic.licenseKey) {
 }
 
 const restify = require('restify')
-const debug = require('debug')('ett.api')
 const { corsOrigins } = require('config')
 const corsMiddleware = require('restify-cors-middleware')
 
@@ -17,7 +16,7 @@ const server = restify.createServer()
 server.use(restify.plugins.queryParser())
 
 function logRequest (req, res, next) {
-  debug('-->', req.url)
+  logger.verbose('-->', req.url)
   return next()
 }
 
