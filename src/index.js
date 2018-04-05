@@ -1,6 +1,6 @@
 const config = require('config')
 
-if (config.newrelic && config.newrelic.licenseKey) {
+if (config.newrelic.licenseKey) {
   require('newrelic')
 }
 
