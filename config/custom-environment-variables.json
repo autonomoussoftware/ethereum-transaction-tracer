@@ -9,5 +9,13 @@
   "corsOrigins": {
     "__name": "CORS_ORIGINS",
     "__format": "json"
+  },
+  "logger": {
+    "papertrail": {
+      "level": "LOGGER_PAPERTRAIL_LEVEL",
+      "host": "LOGGER_PAPERTRAIL_HOST",
+      "port": "LOGGER_PAPERTRAIL_PORT",
+      "program": "LOGGER_PAPERTRAIL_PROGRAM"
+    }
   }
 }
