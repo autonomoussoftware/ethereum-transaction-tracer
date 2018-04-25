@@ -1,7 +1,12 @@
 const Router = require('restify-router').Router
 
 const pkg = require('../package')
+
+const { promiseToMiddleware } = require('./route-utils')
+const logger = require('./logger')
 const tracer = require('./tracer')
+
+const ETH_TX_HASH_FORMAT = '^0x[0-9a-fA-F]{64}$'
 
 const router = new Router()
 
@@ -10,23 +15,36 @@ function getRoot (req, res) {
 }
 
 function getTransactionTrace (req, res) {
-  const hash = req.params.hash
+  const { hash } = req.params
 
-  tracer.transaction(hash)
-    .then(trace => res.send(trace))
-    .catch(err => { throw err })
+  return tracer.transaction(hash)
+    .then(function (trace) {
+      logger.info('<--', hash, trace.result.length)
+      res.json(trace)
+    })
 }
 
 function getReplayTransactionTrace (req, res) {
-  const hash = req.params.hash
+  const { hash } = req.params
 
-  tracer.replayTransaction(hash)
-    .then(trace => res.send(trace))
-    .catch(err => { throw err })
+  return tracer.replayTransaction(hash)
+    .then(function (trace) {
+      logger.info('<--', hash, trace.result.length)
+      res.json(trace)
+    })
 }
 
-router.get('/', getRoot)
-router.get('/transactions/:hash', getTransactionTrace)
-router.get('/transactions/:hash/replay/trace', getReplayTransactionTrace)
+router.get(
+  '/',
+  promiseToMiddleware(getRoot)
+)
+router.get(
+  `/transactions/:hash(${ETH_TX_HASH_FORMAT})`,
+  promiseToMiddleware(getTransactionTrace)
+)
+router.get(
+  `/transactions/:hash(${ETH_TX_HASH_FORMAT})/replay/trace`,
+  promiseToMiddleware(getReplayTransactionTrace)
+)
 
 module.exports = router
