@@ -2,7 +2,7 @@
   "newrelic": {},
   "jsonRpcApiUrl": "http://parity.bloqrock.net:8545",
   "websocketApiUrl": "ws://parity.bloqrock.net:8546",
-  "apiPort": 8080,
+  "apiPort": 3006,
   "corsOrigins": ["http://explorer.mtn.bloqrock.net"],
   "logger": {
     "papertrail": {
