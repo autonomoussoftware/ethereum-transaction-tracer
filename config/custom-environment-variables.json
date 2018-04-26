@@ -4,7 +4,6 @@
     "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
   },
   "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
-  "websocketApiUrl": "ENODE_WS_API_URL",
   "apiPort": "PORT",
   "corsOrigins": {
     "__name": "CORS_ORIGINS",
