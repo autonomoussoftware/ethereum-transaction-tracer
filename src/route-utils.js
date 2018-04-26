@@ -12,7 +12,10 @@ const deprecated = function (req, res, next) {
 const promiseToMiddleware = middleware => function (req, res, next) {
   Promise.resolve(middleware(req, res))
     .then(next)
-    .catch(next)
+    .catch(function (err) {
+      logger.warn('<--', err.statusCode || 500, err.message)
+      next(err)
+    })
 }
 
 module.exports = { deprecated, promiseToMiddleware }
