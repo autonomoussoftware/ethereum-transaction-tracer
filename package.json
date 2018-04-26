@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "config": "1.30.0",
+    "cuid": "2.1.1",
     "newrelic": "4.1.0",
     "restify": "7.1.1",
     "restify-cors-middleware": "1.1.0",

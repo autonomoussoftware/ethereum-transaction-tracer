@@ -1,3 +1,5 @@
+const cuid = require('cuid')
+
 const web3 = require('./web3')
 
 const tracer = {}
@@ -8,7 +10,7 @@ tracer.transaction = function (transactionHash) {
       method: 'trace_transaction',
       params: [transactionHash],
       jsonrpc: '2.0',
-      id: '1'
+      id: cuid()
     }, (err, res) => {
       if (err) { return reject(err) }
 
@@ -23,7 +25,7 @@ tracer.replayTransaction = function (transactionHash) {
       method: 'trace_replayTransaction',
       params: [transactionHash, ['trace', 'stateDiff', 'vmTrace']],
       jsonrpc: '2.0',
-      id: '1'
+      id: cuid()
     }, (err, res) => {
       if (err) { return reject(err) }
 
