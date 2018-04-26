@@ -21,7 +21,7 @@ function getTransactionTrace (req, res) {
     .then(function (data) {
       const { result } = data
       const traces = result ? result.length : 'none'
-      logger.info('<--', hash, traces)
+      logger.verbose('<--', hash, traces)
       res.json(data)
     })
 }
@@ -33,7 +33,7 @@ function getReplayTransactionTrace (req, res) {
     .then(function (data) {
       const { result } = data
       const traces = result && result.trace ? result.trace.length : 'none'
-      logger.info('<--', hash, traces)
+      logger.verbose('<--', hash, traces)
       res.json(data)
     })
 }
