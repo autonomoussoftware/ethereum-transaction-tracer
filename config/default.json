@@ -1,8 +1,8 @@
 {
   "newrelic": {},
-  "jsonRpcApiUrl": "http://parity.bloqrock.net:8545",
+  "jsonRpcApiUrl": "http://localhost:8545",
   "apiPort": 3006,
-  "corsOrigins": ["http://explorer.mtn.bloqrock.net"],
+  "corsOrigins": ["*"],
   "logger": {
     "papertrail": {
       "colorize": true,
