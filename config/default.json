@@ -9,7 +9,8 @@
       "flushOnClose": true,
       "handleExceptions": true,
       "inlineMeta": true,
-      "level": "info"
+      "level": "info",
+      "program": "ethereum-transaction-tracer"
     }
   }
 }
