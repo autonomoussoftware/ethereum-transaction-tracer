@@ -18,9 +18,9 @@ function getTransactionTrace (req, res) {
   const { hash } = req.params
 
   return tracer.transaction(hash)
-    .then(function (trace) {
-      logger.info('<--', hash, trace.result.length)
-      res.json(trace)
+    .then(function (data) {
+      logger.info('<--', hash, data.result ? data.result.length : 'none')
+      res.json(data)
     })
 }
 
@@ -28,9 +28,9 @@ function getReplayTransactionTrace (req, res) {
   const { hash } = req.params
 
   return tracer.replayTransaction(hash)
-    .then(function (trace) {
-      logger.info('<--', hash, trace.result.length)
-      res.json(trace)
+    .then(function (data) {
+      logger.info('<--', hash, data.result ? data.result.length : 'none')
+      res.json(data)
     })
 }
 
