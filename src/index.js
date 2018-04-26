@@ -30,7 +30,7 @@ function start () {
   routes.applyRoutes(server)
 
   server.listen(config.apiPort, function () {
-    logger.info(`API started on port ${config.apiPort}`)
+    logger.info(`Tracer started on port ${config.apiPort}`)
   })
 }
 
