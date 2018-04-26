@@ -19,7 +19,9 @@ function getTransactionTrace (req, res) {
 
   return tracer.transaction(hash)
     .then(function (data) {
-      logger.info('<--', hash, data.result ? data.result.length : 'none')
+      const { result } = data
+      const traces = result ? result.length : 'none'
+      logger.info('<--', hash, traces)
       res.json(data)
     })
 }
@@ -29,7 +31,9 @@ function getReplayTransactionTrace (req, res) {
 
   return tracer.replayTransaction(hash)
     .then(function (data) {
-      logger.info('<--', hash, data.result ? data.result.length : 'none')
+      const { result } = data
+      const traces = result && result.trace ? result.trace.length : 'none'
+      logger.info('<--', hash, traces)
       res.json(data)
     })
 }
