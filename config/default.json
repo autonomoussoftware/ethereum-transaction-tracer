@@ -1,9 +1,14 @@
 {
-  "newrelic": {},
-  "jsonRpcApiUrl": "http://localhost:8545",
   "apiPort": 3006,
   "corsOrigins": ["*"],
+  "jsonRpcApiUrl": "http://localhost:8545",
   "logger": {
+    "console": {
+      "colorize": true,
+      "level": "debug",
+      "prettyPrint": true,
+      "stringify": true
+    },
     "papertrail": {
       "colorize": true,
       "flushOnClose": true,
@@ -12,5 +17,6 @@
       "level": "info",
       "program": "ethereum-transaction-tracer"
     }
-  }
+  },
+  "newrelic": {}
 }

@@ -1,14 +1,10 @@
 {
-  "newrelic": {
-    "licenseKey": "NEW_RELIC_LICENSE_KEY",
-    "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
-  },
-  "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "apiPort": "PORT",
   "corsOrigins": {
     "__name": "CORS_ORIGINS",
     "__format": "json"
   },
+  "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL",
   "logger": {
     "papertrail": {
       "level": "LOGGER_PAPERTRAIL_LEVEL",
@@ -16,5 +12,9 @@
       "port": "LOGGER_PAPERTRAIL_PORT",
       "program": "LOGGER_PAPERTRAIL_PROGRAM"
     }
+  },
+  "newrelic": {
+    "licenseKey": "NEW_RELIC_LICENSE_KEY",
+    "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
   }
 }
