@@ -12,18 +12,18 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['Metronome-eth-tx-tracer'],
+  app_name: ['ethereum-transaction-tracer'],
   /**
    * Your New Relic license key.
    */
-  license_key: config.newrelic.licenseKey,
+  license_key: config.newRelic.licenseKey,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: config.newrelic.loggingLevel
+    level: config.newRelic.loggingLevel
   },
   /**
    * When true, all request headers except for those listed in attributes.exclude

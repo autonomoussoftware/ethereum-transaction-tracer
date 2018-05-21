@@ -13,7 +13,7 @@
       "program": "LOGGER_PAPERTRAIL_PROGRAM"
     }
   },
-  "newrelic": {
+  "newRelic": {
     "licenseKey": "NEW_RELIC_LICENSE_KEY",
     "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
   }

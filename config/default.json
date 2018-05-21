@@ -18,5 +18,5 @@
       "program": "ethereum-transaction-tracer"
     }
   },
-  "newrelic": {}
+  "newRelic": {}
 }
