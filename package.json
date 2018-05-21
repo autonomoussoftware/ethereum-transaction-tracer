@@ -25,6 +25,7 @@
     "prepush": "npm run check"
   },
   "dependencies": {
+    "before-exit": "1.0.0",
     "config": "1.30.0",
     "cuid": "2.1.1",
     "newrelic": "4.1.1",

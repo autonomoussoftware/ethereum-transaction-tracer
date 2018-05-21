@@ -1,6 +1,7 @@
 'use strict'
 
 const { corsOrigins } = require('config')
+const beforeExit = require('before-exit')
 const corsMiddleware = require('restify-cors-middleware')
 const restify = require('restify')
 
@@ -23,6 +24,10 @@ function logRequest (req, res, next) {
 server.use(logRequest)
 
 function start (port) {
+  beforeExit.do(function (signal) {
+    logger.error('Tracer shutting down API on signal', signal)
+  })
+
   routes.applyRoutes(server)
 
   server.listen(port, function () {
