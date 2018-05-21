@@ -1,3 +1,5 @@
+'use strict'
+
 const Router = require('restify-router').Router
 
 const pkg = require('../package')

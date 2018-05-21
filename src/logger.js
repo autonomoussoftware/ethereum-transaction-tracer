@@ -1,3 +1,5 @@
+'use strict'
+
 const winston = require('winston')
 const winstonChildLogger = require('winston-child-logger')
 const SentryTransport = require('winston-sentry-transport')
@@ -9,7 +11,7 @@ const logger = winstonChildLogger(new winston.Logger())
 logger.levelLength = 7
 logger.padLevels = true
 
-logger.filters.push((_, message, meta) => {
+logger.filters.push(function (_, message, meta) {
   if (!message && meta instanceof Error) { return meta.stack || meta.message }
 
   return message
