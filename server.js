@@ -1,4 +1,10 @@
 'use strict'
 
+const { newRelic, port } = require('config')
 const api = require('./src')
-api.start()
+
+if (newRelic.licenseKey) {
+  require('newrelic')
+}
+
+api.start(port)

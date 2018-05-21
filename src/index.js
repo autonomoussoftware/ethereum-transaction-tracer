@@ -1,19 +1,17 @@
 'use strict'
 
-const config = require('config')
-
-if (config.newrelic.licenseKey) {
-  require('newrelic')
-}
-
-const restify = require('restify')
 const { corsOrigins } = require('config')
 const corsMiddleware = require('restify-cors-middleware')
+const restify = require('restify')
 
-const logger = require('./logger.js')
-
+const logger = require('./logger')
 const routes = require('./routes')
+
 const server = restify.createServer()
+
+const cors = corsMiddleware({ origins: corsOrigins })
+server.pre(cors.preflight)
+server.use(cors.actual)
 
 server.use(restify.plugins.queryParser())
 
@@ -22,20 +20,14 @@ function logRequest (req, res, next) {
   return next()
 }
 
-const cors = corsMiddleware({ origins: corsOrigins })
-server.pre(cors.preflight)
-server.use(cors.actual)
-
 server.use(logRequest)
 
-function start () {
+function start (port) {
   routes.applyRoutes(server)
 
-  server.listen(config.port, function () {
-    logger.info(`Tracer started on port ${config.port}`)
+  server.listen(port, function () {
+    logger.info(`Tracer started on port ${port}`)
   })
 }
 
-module.exports = {
-  start
-}
+module.exports = { start }
