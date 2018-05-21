@@ -19,7 +19,7 @@
   "repository": "autonomoussoftware/ethereum-transaction-tracer",
   "scripts": {
     "check": "dependency-check . && dependency-check . --unused --no-dev",
-    "dev": "nodemon server.js",
+    "dev": "nodemon -w . server.js",
     "lint": "eslint --cache .",
     "precommit": "npm run lint",
     "prepush": "npm run check"
