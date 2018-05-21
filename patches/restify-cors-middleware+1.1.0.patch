@@ -1,0 +1,12 @@
+patch-package
+--- a/node_modules/restify-cors-middleware/package.json
++++ b/node_modules/restify-cors-middleware/package.json
+@@ -56,7 +56,7 @@
+   "main": "src/index.js",
+   "name": "restify-cors-middleware",
+   "peerDependencies": {
+-    "restify": "2.6.x - 6.x.x"
++    "restify": "2.6.x - 7.x.x"
+   },
+   "repository": {
+     "type": "git",

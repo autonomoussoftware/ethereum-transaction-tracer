@@ -22,6 +22,7 @@
     "dev": "nodemon -w . server.js",
     "lint": "eslint --cache .",
     "precommit": "npm run lint",
+    "prepare": "patch-package",
     "prepush": "npm run check"
   },
   "dependencies": {
@@ -50,7 +51,8 @@
     "eslint-plugin-promise": "3.7.0",
     "eslint-plugin-standard": "3.1.0",
     "husky": "0.14.3",
-    "nodemon": "1.17.4"
+    "nodemon": "1.17.4",
+    "patch-package": "5.1.1"
   },
   "engines": {
     "node": "8",

@@ -1,0 +1,20 @@
+patch-package
+--- a/node_modules/patch-package/dist/makePatch.js
++++ b/node_modules/patch-package/dist/makePatch.js
+@@ -66,14 +66,14 @@ function makePatch(packageName, appPath, packageManager, includePaths, excludePa
+         fs.writeFileSync(path.join(tmpRepo.name, ".gitignore"), "!/node_modules\n\n");
+         tmpExec_1("git", ["init"]);
+         // don't commit package.json though
+-        fs.unlinkSync(path.join(tmpRepo.name, "node_modules", packageName, "package.json"));
++        // fs.unlinkSync(path.join(tmpRepo.name, "node_modules", packageName, "package.json"));
+         tmpExec_1("git", ["add", "-f", slash(path.join("node_modules", packageName))]);
+         tmpExec_1("git", ["commit", "-m", "init"]);
+         // replace package with user's version
+         rimraf.sync(tmpRepoPackagePath);
+         fsExtra.copySync(packagePath, tmpRepoPackagePath, { recursive: true });
+         // remove package.json again
+-        fs.unlinkSync(path.join(tmpRepo.name, "node_modules", packageName, "package.json"));
++        // fs.unlinkSync(path.join(tmpRepo.name, "node_modules", packageName, "package.json"));
+         // stage all files
+         tmpExec_1("git", ["add", "-f", slash(path.join("node_modules", packageName))]);
+         // unstage any ignored files so they don't show up in the diff
