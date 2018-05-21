@@ -14,11 +14,9 @@ function getTransactionTrace (req, res) {
   const { hash } = req.params
 
   return tracer.traceTransaction(hash)
-    .then(function (data) {
-      const { result } = data
-      const traces = result ? result.length : 'none'
-      logger.verbose('<--', hash, traces)
-      res.json(data)
+    .then(function (traces = []) {
+      logger.verbose('<--', hash, traces.length)
+      res.json(traces)
     })
 }
 
