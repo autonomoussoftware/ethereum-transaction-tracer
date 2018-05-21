@@ -16,8 +16,8 @@ The following environment variables shall be set:
 
 For Papertrail logging, the following variables shall be set:
 
-- `LOGGER_PAPERTRAIL_LEVEL`
 - `LOGGER_PAPERTRAIL_HOST`
+- `LOGGER_PAPERTRAIL_LEVEL`
 - `LOGGER_PAPERTRAIL_PORT`
 - `LOGGER_PAPERTRAIL_PROGRAM` (optional)
 

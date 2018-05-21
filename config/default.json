@@ -3,13 +3,13 @@
   "corsOrigins": ["*"],
   "jsonRpcApiUrl": "http://localhost:8545",
   "logger": {
-    "console": {
+    "Console": {
       "colorize": true,
       "level": "debug",
       "prettyPrint": true,
       "stringify": true
     },
-    "papertrail": {
+    "Papertrail": {
       "colorize": true,
       "flushOnClose": true,
       "handleExceptions": true,
