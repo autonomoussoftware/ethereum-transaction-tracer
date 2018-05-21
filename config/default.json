@@ -1,7 +1,8 @@
 {
-  "apiPort": 3006,
   "corsOrigins": ["*"],
-  "jsonRpcApiUrl": "http://localhost:8545",
+  "enode": {
+    "jsonRpcApiUrl": "http://localhost:8545"
+  },
   "logger": {
     "Console": {
       "colorize": true,
@@ -18,5 +19,6 @@
       "program": "ethereum-transaction-tracer"
     }
   },
-  "newRelic": {}
+  "newRelic": {},
+  "port": 3006
 }
