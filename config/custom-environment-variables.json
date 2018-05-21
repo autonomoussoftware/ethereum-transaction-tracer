@@ -1,0 +1,22 @@
+{
+  "corsOrigins": {
+    "__name": "CORS_ORIGINS",
+    "__format": "json"
+  },
+  "enode": {
+    "jsonRpcApiUrl": "ENODE_JSON_RPC_API_URL"
+  },
+  "logger": {
+    "Papertrail": {
+      "host": "LOGGER_PAPERTRAIL_HOST",
+      "level": "LOGGER_PAPERTRAIL_LEVEL",
+      "port": "LOGGER_PAPERTRAIL_PORT",
+      "program": "LOGGER_PAPERTRAIL_PROGRAM"
+    }
+  },
+  "newRelic": {
+    "licenseKey": "NEW_RELIC_LICENSE_KEY",
+    "loggingLevel": "NEW_RELIC_LOGGING_LEVEL"
+  },
+  "port": "PORT"
+}

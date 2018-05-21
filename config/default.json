@@ -1,0 +1,24 @@
+{
+  "corsOrigins": ["*"],
+  "enode": {
+    "jsonRpcApiUrl": "http://localhost:8545"
+  },
+  "logger": {
+    "Console": {
+      "colorize": true,
+      "level": "debug",
+      "prettyPrint": true,
+      "stringify": true
+    },
+    "Papertrail": {
+      "colorize": true,
+      "flushOnClose": true,
+      "handleExceptions": true,
+      "inlineMeta": true,
+      "level": "info",
+      "program": "ethereum-transaction-tracer"
+    }
+  },
+  "newRelic": {},
+  "port": 3006
+}
