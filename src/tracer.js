@@ -4,13 +4,11 @@ const cuid = require('cuid')
 
 const web3 = require('./web3')
 
-const tracer = {}
-
-tracer.transaction = function (transactionHash) {
+function traceTransaction (hash) {
   return new Promise(function (resolve, reject) {
     web3.currentProvider.send({
       method: 'trace_transaction',
-      params: [transactionHash],
+      params: [hash],
       jsonrpc: '2.0',
       id: cuid()
     }, function (err, res) {
@@ -21,19 +19,4 @@ tracer.transaction = function (transactionHash) {
   })
 }
 
-tracer.replayTransaction = function (transactionHash) {
-  return new Promise(function (resolve, reject) {
-    web3.currentProvider.send({
-      method: 'trace_replayTransaction',
-      params: [transactionHash, ['trace', 'stateDiff', 'vmTrace']],
-      jsonrpc: '2.0',
-      id: cuid()
-    }, function (err, res) {
-      if (err) { return reject(err) }
-
-      return resolve(res)
-    })
-  })
-}
-
-module.exports = tracer
+module.exports = { traceTransaction }
