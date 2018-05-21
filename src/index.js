@@ -23,13 +23,13 @@ function logRequest (req, res, next) {
 
 server.use(logRequest)
 
+routes.applyRoutes(server)
+
+beforeExit.do(function (signal) {
+  logger.error('Tracer shutting down API on signal', signal)
+})
+
 function start (port) {
-  beforeExit.do(function (signal) {
-    logger.error('Tracer shutting down API on signal', signal)
-  })
-
-  routes.applyRoutes(server)
-
   server.listen(port, function () {
     logger.info(`Tracer started on port ${port}`)
   })
