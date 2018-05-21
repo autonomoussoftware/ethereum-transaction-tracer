@@ -17,7 +17,7 @@ server.use(cors.actual)
 server.use(restify.plugins.queryParser())
 
 function logRequest (req, res, next) {
-  logger.verbose('-->', req.url)
+  logger.verbose('-->', req.method, req.url)
   return next()
 }
 
