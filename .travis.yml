@@ -8,14 +8,3 @@ node_js:
 cache:
   directories:
     - "node_modules"
-
-deploy:
-  - provider: elasticbeanstalk
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    region: "sa-east-1"
-    app: "ethereum-transaction-tracer"
-    env: "ethereum-transaction-tracer-dev"
-    bucket_name: "elasticbeanstalk-sa-east-1-869739316835"
-    on:
-      branch: develop
