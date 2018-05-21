@@ -2,7 +2,21 @@
   "name": "ethereum-transaction-tracer",
   "version": "1.0.0",
   "description": "🐾 Simple REST tracer for Ethereum transactions",
+  "keywords": [
+    "ethereum",
+    "transaction",
+    "tracer",
+    "parity",
+    "rest"
+  ],
+  "homepage": "https://github.com/autonomoussoftware/ethereum-transaction-tracer#readme",
+  "bugs": {
+    "url": "https://github.com/autonomoussoftware/ethereum-transaction-tracer/issues"
+  },
+  "license": "MIT",
+  "author": "Ignacio Anaya <ignacio@bloq.com>",
   "main": "server.js",
+  "repository": "autonomoussoftware/ethereum-transaction-tracer",
   "scripts": {
     "dev": "nodemon server.js"
   },
@@ -28,23 +42,6 @@
     "eslint-plugin-standard": "3.1.0",
     "nodemon": "1.17.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bloqpriv/ethereum-transaction-tracer.git"
-  },
-  "keywords": [
-    "ethereum",
-    "transaction",
-    "tracer",
-    "parity",
-    "rest"
-  ],
-  "author": "Ignacio Anaya <ignacio@bloq.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bloqpriv/ethereum-transaction-tracer/issues"
-  },
-  "homepage": "https://github.com/bloqpriv/ethereum-transaction-tracer#readme",
   "engines": {
     "node": "8",
     "npm": "5"
