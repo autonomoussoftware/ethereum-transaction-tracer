@@ -4,8 +4,7 @@
   "description": "🐾 Simple REST tracer for Ethereum transactions",
   "main": "server.js",
   "scripts": {
-    "start": "node ./bin/api",
-    "dev": "nodemon ./bin/api"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "config": "1.30.0",
