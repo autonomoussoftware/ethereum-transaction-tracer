@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/autonomoussoftware/ethereum-transaction-tracer.svg?branch=master)](https://travis-ci.com/autonomoussoftware/ethereum-transaction-tracer)
+[![Code Style](https://img.shields.io/badge/code%20style-bloq-0063a6.svg)](https://github.com/bloq/eslint-config-bloq)
+[![Known Vulnerabilities](https://snyk.io/test/github/autonomoussoftware/ethereum-transaction-tracer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/autonomoussoftware/ethereum-transaction-tracer)
+
 # Ethereum Transaction Tracer
 
 > 🐾 Simple REST tracer for Ethereum transactions and Parity clients.
