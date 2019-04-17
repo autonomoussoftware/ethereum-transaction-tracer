@@ -22,8 +22,9 @@
     "dev": "nodemon -w . server.js",
     "lint": "eslint --cache .",
     "precommit": "npm run lint",
-    "prepare": "patch-package",
-    "prepush": "npm run check"
+    "prepare": "npm run snyk-protect; patch-package",
+    "prepush": "npm run check",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "before-exit": "1.0.0",
@@ -36,7 +37,8 @@
     "web3": "1.0.0-beta.34",
     "winston": "2.4.2",
     "winston-papertrail": "1.0.5",
-    "winston-sentry-transport": "1.0.0"
+    "winston-sentry-transport": "1.0.0",
+    "snyk": "^1.151.1"
   },
   "devDependencies": {
     "dependency-check": "3.1.0",
@@ -57,5 +59,6 @@
   "engines": {
     "node": "8",
     "npm": "5"
-  }
+  },
+  "snyk": true
 }
